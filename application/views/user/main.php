@@ -61,6 +61,7 @@
                             <a href="<?php echo base_url(); ?>usuario/<?php echo $value->alumno; ?>" class="btn btn-primary"><ion-icon name="create-outline"></ion-icon></a> 
                            <!-- <a href="<?php echo base_url(); ?>usuario/delete/<?php echo $value->alumno; ?>" class="btn btn-danger"><ion-icon name="trash"></ion-icon></a> -->
                            <button onclick="clicked(<?php echo $value->alumno; ?>)"  class="btn btn-danger"><ion-icon name="remove"></ion-icon></button>
+                           
                         </td>
                     </tr>
                     <?php endforeach; ?>
@@ -74,7 +75,7 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
  <script>
-  const clicked = (alumno) => {
+  const clicked = (id) => {
    swal({
     title: "¿Estas seguro de eliminar el alumno?",
     text: "Una vez eliminado, se eliminará permanentemente...",

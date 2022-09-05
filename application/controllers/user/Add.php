@@ -24,12 +24,12 @@ class Add extends CI_Controller {
 		$dpi = $this->input->post("dpi");
 
 		
-		$this->form_validation->set_rules('nombre', 'Nombre');
-		$this->form_validation->set_rules('apellido', 'Apellido');
-		$this->form_validation->set_rules('direccion', 'direccion');
-		$this->form_validation->set_rules('movil', 'telefono');
+		$this->form_validation->set_rules('nombre', 'Nombre', 'required|max_length[100]');
+		$this->form_validation->set_rules('apellido', 'Apellido', 'required|max_length[100]');
+		$this->form_validation->set_rules('direccion', 'direccion', 'required|max_length[100]');
+		$this->form_validation->set_rules('movil', 'telefono', 'required|max_length[8]');
 		$this->form_validation->set_rules('email', 'Correo eléctronico', 'required|valid_email|is_unique[alumnos.email]');
-		$this->form_validation->set_rules('dpi', 'Dpi', 'required|min_length[15]');
+		$this->form_validation->set_rules('dpi', 'Dpi', 'required|max_length[15]');
 		$this->form_validation->set_rules('inactivo', 'Estado');
 		
 
