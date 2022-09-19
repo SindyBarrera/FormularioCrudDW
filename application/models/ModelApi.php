@@ -14,5 +14,14 @@ class ModelApi extends CI_Model {
         $results=$this->db->get();
         return empty($results->result());
     }
+
+    public function get_pass($usuario)
+    {
+        $this->db->select("u.password, u.nombre, u.apellido");
+        $this->db->from("tb_api u");
+        $this->db->where("u.correo",$usuario);
+        $result=$this->db->get();
+        return $result->result();
+    }
     
 }

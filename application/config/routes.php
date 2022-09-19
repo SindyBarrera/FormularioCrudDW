@@ -75,4 +75,5 @@ $route['usuario/delete/(:num)'] = 'user/Main/delete/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['ApiR'] = 'APIRest/ApiR/index_post';
+$route['InicioSesion'] = 'APIRest/ApiR/login';
 
